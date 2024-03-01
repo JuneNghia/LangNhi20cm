@@ -464,13 +464,13 @@
             });
         </script>
         </div>
-        <!-- <audio  src="911.mp3" preload="auto" type="audio/mp3" autoplay loop=""></audio> -->
-        <audio autoplay loop hidden>
-            <source src="19-12-2003.mp3" type="audio/mpeg">
-          </audio>
+        <audio controls id="myAudio" autoplay loop hidden>
+            <source src="19-12-2003.mp3">
+        </audio>
+        
 
-         
-        <!-- <iframe src="./19-12-2003.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+<!--          
+        <iframe src="./19-12-2003.mp3" allow="autoplay" style="display:none" id="iframeAudio">
         </iframe>  -->
 
         
@@ -484,6 +484,17 @@
                 margin-top: 85px;font-family: 'Pattaya', sans-serif;">Đồng ý</a>
             <div class="heartCa"></div>
         </div>
+        
+      
+
+       <script>
+            alert('Click vô ngày tháng năm sinh của em bên góc trái giúp anh một cái nhe. Iuuu pé, đi Hàn bỏ anh :((')
+
+            window.addEventListener('click', () => {
+                document.getElementById('myAudio').play();
+            });
+       </script>
+
         <script type="text/javascript">
             $(document).ready(function(){
                 $('body').on("click",'.heart',function(){
@@ -498,13 +509,13 @@
                 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
                 
                 if(!isChrome){
-                    // $('#iframeAudio').remove()
+                    $('#iframeAudio').remove()
                 } else {
-                    // $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+                    $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
                 }
             });
             
-            
+           
         </script>
     </body>
 </html>
